@@ -6,7 +6,7 @@
   "auth": {
     "oauth": {
       "version": "2.0",
-      "type": "client_credentials",
+      "type": "implicit",
       "base_uri": "http://api.gominnow.com/",
       "access_token_uri": "user/jwt"
     }
