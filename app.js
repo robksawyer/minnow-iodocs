@@ -39,6 +39,7 @@ var express     = require('express'),
     clone       = require('clone'),
     redis       = require('redis'),
     RedisStore  = require('connect-redis')(express),
+    jsonminify  = require("jsonminify"),
     server;
 
 //
