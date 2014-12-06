@@ -3,7 +3,7 @@
     "address": process.env.DOC_ADDRESS,
     "port" : process.env.DOC_PORT,
     "apiConfigDir" : "./public/data/",
-    "debug" : false,
+    "debug" : true,
     "sessionSecret" : process.env.DOC_SESSION_SECRET,
     "basicAuth" : {
         "username" : process.env.IODOC_USER,
