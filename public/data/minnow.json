@@ -4,31 +4,11 @@
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
   "auth": {
-    "key": {
-      "param": "access_token",
-      "location": "query"
-    },
-    "oauth-facebook": {
+    "oauth": {
       "version": "2.0",
-      "type": "authorization-code",
-      "base_uri": "https://api.gominnow.com",
-      "authorize_uri": "auth/login?type=facebook",
-      "access_token_uri": "user/jwt",
-      "token": {
-          "param": "access_token",
-          "location": "query"
-      }
-    },
-    "oauth-user": {
-      "version": "2.0",
-      "type": "authorization-code",
-      "base_uri": "https://api.gominnow.com",
-      "authorize_uri": "auth/login?type=local",
-      "access_token_uri": "user/jwt",
-      "token": {
-          "param": "access_token",
-          "location": "query"
-      }
+      "type": "client_credentials",
+      "base_uri": "http://api.gominnow.com/",
+      "access_token_uri": "user/jwt"
     }
   },
   "headers": {
