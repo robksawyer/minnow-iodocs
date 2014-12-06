@@ -35,8 +35,7 @@
                     "required":false,
                     "default": 0,
                     "type":"number",
-                    "description":"Use sumlevid to define what level of census data you would like.",
-                    "enum": ["1","2","3","4"]
+                    "description":"This is used for paging. Skip the number of posts you want."
                 }
             }
         }
