@@ -1,5 +1,5 @@
 {
-  "name": "Minnow API (User/Pass Login)",
+  "name": "Minnow API (Phone Login)",
   "protocol": "rest",
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
