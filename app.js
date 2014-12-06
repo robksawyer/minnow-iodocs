@@ -20,7 +20,8 @@
 // TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
-
+// ENVIRONMENT VARIABLES
+// DOC_SESSION_SECRET = '000000000'
 //
 // Module dependencies
 //
@@ -99,7 +100,7 @@ if(config.redis) {
 //
 // Load API Configs
 //
-config.apiConfigDir = path.resolve(config.apiConfigDir || 'public/data');
+config.apiConfigDir = path.resolve(config.apiConfigDir || './public/data/');
 if (!fs.existsSync(config.apiConfigDir)) {
     console.error("Could not find API config directory: " + config.apiConfigDir);
     process.exit(1);
@@ -127,7 +128,7 @@ app.configure(function() {
 
 if(config.redis) {
     app.use(express.session({
-        secret: config.sessionSecret,
+        secret: process.env.DOC_SESSION_SECRET || config.sessionSecret,
         store:  new RedisStore({
             'host':   config.redis.host,
             'port':   config.redis.port,
