@@ -85,6 +85,7 @@ if(config.redis) {
         var rtg = require("url").parse(process.env.REDISCLOUD_URL || process.env.REDIS_URL);
         config.redis.host = rtg.hostname;
         config.redis.port = rtg.port;
+        console.log("Starting Redis on port " + rtg.port);
         config.redis.password = rtg.auth && rtg.auth.split(":")[1] ? rtg.auth.split(":")[1] : '';
     }
 
