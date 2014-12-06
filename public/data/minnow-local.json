@@ -1,13 +1,13 @@
 {
-  "name": "Minnow API (Facebook Login)",
+  "name": "Minnow API (User/Pass Login)",
   "protocol": "rest",
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
   "auth": {
     "oauth": {
       "version": "2.0",
-      "type": "authorization_code",
-      "base_uri": "http://api.gominnow.com/auth/login?type=facebook",
+      "type": "password",
+      "base_uri": "http://api.gominnow.com/auth/login?type=local",
       "access_token_uri": "user/jwt"
     }
   },
