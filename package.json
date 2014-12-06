@@ -1,7 +1,7 @@
 {
-  "name": "minnow iodocs",
+  "name": "minnow-iodocs",
   "version": "0.0.1",
-  "description": "Live API Documentation and Browsing",
+  "description": "Live Minnow API Documentation and Browsing",
   "homepage": "http://gominnow.com",
   "keywords": [
     "livedocs",
@@ -9,18 +9,15 @@
     "documentation",
     "api"
   ],
-  "author": "Mashery, Inc. <nmansilla@mashery.com>",
+  "author": "Minnow, Inc. <help@minnow.com>",
   "contributors": [
-    "Kelly Miyashiro <kelly@mashery.com.com>",
-    "Neil Mansilla <neil@mashery.com>",
-    "Mike Squires <msquires@mashery.com>",
-    "Uriah Welcome <uriah@mashery.com>",
-    "Alex Adkins <aadkins@mashery.com>",
-    "Rowan Hill https://github.com/rowanhill"
+    "Rob Sawyer <rob@gominnow.com>",
+    "Jay Wallace <jay@gominnow.com>",
+    "Drew Anderson <drew@gominnow.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mashery/iodocs.git"
+    "url": "git://github.com/robksawyer/minnow-iodocs.git"
   },
   "dependencies": {
     "clone": "0.1.1",
