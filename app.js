@@ -40,6 +40,7 @@ var express     = require('express'),
     redis       = require('redis'),
     RedisStore  = require('connect-redis')(express),
     jsonminify  = require("jsonminify"),
+    newrelic    = require('newrelic'),
     server;
 
 //
