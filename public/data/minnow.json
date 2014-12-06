@@ -1,0 +1,60 @@
+{
+  "name": "Minnow API",
+  "protocol": "rest",
+  "basePath": "http://api.gominnow.com",
+  "publicPath": "/open",
+  "auth": {
+    "oauth-facebook": {
+        "version": "2.0",
+        "type": "authorization-code",
+        "base_uri": "https://api.gominnow.com",
+        "authorize_uri": "auth/login?type=facebook",
+        "access_token_uri": "user/jwt",
+        "token": {
+            "param": "access_token",
+            "location": "query"
+        }
+    },
+    "oauth-user": {
+        "version": "2.0",
+        "type": "authorization-code",
+        "base_uri": "https://api.gominnow.com",
+        "authorize_uri": "auth/login?type=local",
+        "access_token_uri": "user/jwt",
+        "token": {
+            "param": "access_token",
+            "location": "query"
+        }
+    }
+  },
+
+  "resources" : {
+    "Posts": {
+      "methods": {
+        "latest": {
+          "name": "Latest",
+          "description": "Returns the latest posts.",
+          "httpMethod": "GET",
+          "path": "/post/latest",
+            "parameters": {
+                "limit": {
+                    "title":"limit",
+                    "required":false,
+                    "default": 10,
+                    "type":"number",
+                    "description":"Return a certain number."
+                },
+                "sumlevid": {
+                    "title":"skip",
+                    "required":false,
+                    "default":"2",
+                    "type":"string",
+                    "description":"Use sumlevid to define what level of census data you would like.",
+                    "enum": ["1","2","3","4"]
+                }
+            }
+        }
+      }
+    }
+  }
+}
