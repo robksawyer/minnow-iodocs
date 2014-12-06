@@ -50,11 +50,11 @@
                     "type":"number",
                     "description":"Return a certain number."
                 },
-                "sumlevid": {
+                "skip": {
                     "title":"skip",
                     "required":false,
-                    "default":"2",
-                    "type":"string",
+                    "default": 0,
+                    "type":"number",
                     "description":"Use sumlevid to define what level of census data you would like.",
                     "enum": ["1","2","3","4"]
                 }
