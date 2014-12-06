@@ -79,8 +79,8 @@ var defaultDB = '0';
 if(config.redis) {
     config.redis.database = config.redis.database || defaultDB;
 
-    if (process.env.REDISTOGO_URL || process.env.REDIS_URL) {
-        var rtg = require("url").parse(process.env.REDISTOGO_URL || process.env.REDIS_URL);
+    if (process.env.REDISCLOUD_URL || process.env.REDIS_URL) {
+        var rtg = require("url").parse(process.env.REDISCLOUD_URL || process.env.REDIS_URL);
         config.redis.host = rtg.hostname;
         config.redis.port = rtg.port;
         config.redis.password = rtg.auth && rtg.auth.split(":")[1] ? rtg.auth.split(":")[1] : '';
