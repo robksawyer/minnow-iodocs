@@ -7,8 +7,13 @@
     "oauth": {
       "version": "2.0",
       "type": "authorization_code",
-      "base_uri": "http://api.gominnow.com/auth/login?type=facebook",
-      "access_token_uri": "user/jwt"
+      "base_uri": "http://api.gominnow.com/",
+      "authorize_uri": "auth/login?type=facebook",
+      "access_token_uri": "auth/facebook_oauth2",
+      "token": {
+        "param": "code",
+        "location": "query"
+      }
     }
   },
   "headers": {
@@ -18,7 +23,7 @@
     "Posts": {
       "methods": {
         "latest": {
-          "name": "Latest",
+          "name": "Latest Posts",
           "description": "Returns the latest posts.",
           "httpMethod": "GET",
           "path": "/post/latest",
