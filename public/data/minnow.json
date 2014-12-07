@@ -12,11 +12,12 @@
       "Accept": "application/json"
   },
   "resources" : {
-    "Account": {
+    "Authentication": {
+      "description": "Users can be authenticated with the API by using secure JSON Web Tokens (JWT).",
       "methods": {
         "login": {
           "name": "User Login",
-          "description": "Logs a user in and enables access to token.",
+          "description": "Logs a user in.",
           "httpMethod": "POST",
           "path": "/auth/login",
             "parameters": {
