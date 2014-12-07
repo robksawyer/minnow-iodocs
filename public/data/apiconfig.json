@@ -1,8 +1,5 @@
 {
     "minnow": {
         "name": "Minnow v1 API (Facebook Login)"
-    },
-    "minnow-local": {
-        "name": "Minnow v1 API (Phone Number Login)"
     }
 }

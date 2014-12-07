@@ -1,21 +1,51 @@
 {
-  "name": "Minnow API (Facebook Login)",
+  "name": "Minnow API",
   "protocol": "rest",
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
   "auth": {
-    "oauth": {
-      "version": "2.0",
-      "type": "authorization_code",
-      "base_uri": "http://api.gominnow.com/",
-      "authorize_uri": "user/authorize",
-      "access_token_uri": "user/jwt"
+    "key": {
+      "param": "access_token"
     }
   },
   "headers": {
       "Accept": "application/json"
   },
   "resources" : {
+    "User Login": {
+      "methods": {
+        "login": {
+          "name": "User Login",
+          "description": "Logs a user in and enables access to token.",
+          "httpMethod": "POST",
+          "path": "/auth/login",
+            "parameters": {
+                "type": {
+                    "title":"type",
+                    "required":false,
+                    "default": "local",
+                    "type":"string",
+                    "description":"Login type.",
+                    "enum": ["local","facebook"]
+                },
+                "phone": {
+                    "title":"phone number",
+                    "required":false,
+                    "default": "000-000-0000",
+                    "type":"string",
+                    "description":"The phone number you signed up with."
+                },
+                "password": {
+                    "title":"password",
+                    "required":false,
+                    "default": "",
+                    "type":"string",
+                    "description":"Password for your account."
+                }
+            }
+        }
+      }
+    },
     "Posts": {
       "methods": {
         "latest": {
