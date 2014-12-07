@@ -12,7 +12,7 @@
       "Accept": "application/json"
   },
   "resources" : {
-    "Authentication": {
+    "Authentication [BROKEN]": {
       "description": "Users can be authenticated with the API by using secure [JSON Web Tokens](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html) (JWT).",
       "methods": {
         "login": {
@@ -110,6 +110,13 @@
                     "default": 0,
                     "type":"number",
                     "description":"This is used for paging. Skip the number of posts you want."
+                },
+                "access_token": {
+                    "title":"access_token",
+                    "required":true,
+                    "default": "",
+                    "type":"string",
+                    "description":"A valid user access token. See [gaining access token](#access_token) for more details."
                 }
             }
         }
