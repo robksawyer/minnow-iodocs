@@ -78,10 +78,10 @@
             }
         },
         "refresh-token": {
-          "name": "Refresh Token",
+          "name": "[COMING SOON] Refresh Token",
           "description": "[COMING SOON] Grabs a refresh token.",
           "httpMethod": "GET",
-          "path": "/user/jwt",
+          "path": "/user/jwt-refresh",
             "parameters": {
                 
             }
