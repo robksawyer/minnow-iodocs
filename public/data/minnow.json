@@ -8,12 +8,8 @@
       "version": "2.0",
       "type": "authorization_code",
       "base_uri": "http://api.gominnow.com/",
-      "authorize_uri": "auth/login?type=facebook",
-      "access_token_uri": "auth/facebook_oauth2",
-      "token": {
-        "param": "code",
-        "location": "query"
-      }
+      "authorize_uri": "user/authorize",
+      "access_token_uri": "user/jwt"
     }
   },
   "headers": {
