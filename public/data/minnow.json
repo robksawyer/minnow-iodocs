@@ -120,13 +120,12 @@
                     "description":"A valid user access token. See [gaining access token](#access_token) for more details."
                 }
             }
-        }
-      },
-      "createPost": {
-          "name": "Create a Post",
-          "description": "Create a Post.",
-          "httpMethod": "POST",
-          "path": "/post/create",
+        },
+        "createPost": {
+            "name": "Create a Post",
+            "description": "Create a Post.",
+            "httpMethod": "POST",
+            "path": "/post/create",
             "parameters": {
                 "body": {
                     "title":"body",
@@ -202,7 +201,7 @@
                 }
             }
         }
-
+      }
     },
 
     "Comments": {
