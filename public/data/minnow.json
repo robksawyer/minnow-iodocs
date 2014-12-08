@@ -13,7 +13,6 @@
   },
   "resources" : {
     "Authentication [BROKEN]": {
-      "description": "Users can be authenticated with the API by using secure [JSON Web Tokens](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html) (JWT).",
       "methods": {
         "login": {
           "name": "User Login",
