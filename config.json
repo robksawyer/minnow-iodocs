@@ -6,8 +6,8 @@
     "debug" : false,
     "sessionSecret" : "237868",
     "basicAuth" : {
-        "username" : "",
-        "password" : ""
+        "username" : "minnow",
+        "password" : "winnom"
     },
     "redis" : {
         "host" : "localhost",
