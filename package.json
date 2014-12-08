@@ -26,6 +26,7 @@
     "jade": "0.32.0",
     "jsonminify": "^0.2.3",
     "jwt-simple": "^0.2.0",
+    "markdown": "^0.5.0",
     "newrelic": "^1.14.1",
     "node-json-minify": ">= 0.1.x",
     "oauth": "0.9.10",
