@@ -72,19 +72,13 @@
           "name": "Access Token",
           "description": "Grabs an access token.",
           "httpMethod": "GET",
-          "path": "/user/jwt",
-          "parameters": {
-              
-          }
+          "path": "/user/jwt"
         },
         "refresh-token": {
           "name": "[COMING SOON] Refresh Token",
           "description": "[COMING SOON] Grabs a refresh token.",
           "httpMethod": "GET",
-          "path": "/user/jwt-refresh",
-          "parameters": {
-              
-          }
+          "path": "/user/jwt-refresh"
         }
       }
     },
@@ -117,7 +111,7 @@
                 "required":true,
                 "default": "",
                 "type":"string",
-                "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                "description":"A valid user access token. See Authentication above for more details."
             }
           }
         },
@@ -197,7 +191,7 @@
                 "required":true,
                 "default": "",
                 "type":"string",
-                "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                "description":"A valid user access token. See Authentication above for more details."
             }
           }
         }
@@ -230,7 +224,7 @@
                 "required":true,
                 "default": "",
                 "type":"string",
-                "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                "description":"A valid user access token. See Authentication above for more details."
             }
           }
         },
@@ -281,7 +275,7 @@
                 "required":true,
                 "default": "",
                 "type":"string",
-                "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                "description":"A valid user access token. See Authentication above for more details."
             }
           }
         }
