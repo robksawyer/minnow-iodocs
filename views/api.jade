@@ -20,20 +20,20 @@ block content
     :markdown
       # [Authentication](#authentication)
 
-    :markdown
       ## Login Types
       There are two forms of authentication built in at the moment. 
     
         1. Local authentication is completed by providing a phone number along with a password. This account is verified via a two factor authenciation methodology via a text message. 
+        
         2. The second is authentication via Facebook. In order to be authenticated via Facebook, a user must be at least 18 years old. 
-    
+
+
       ## The Access Token 
       In order to access the different parts of the site, users must be authenticated in the API by using secure 
       [JSON Web Tokens (JWT)](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)
       . You can gain a JWT by sending a GET request to `user/jwt` after a user is authenticated via one of the methods above.
 
-    br
-
+  br
   br
 
   form#credentials
