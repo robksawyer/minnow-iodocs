@@ -15,22 +15,26 @@ block content
   - else
       - var authed =''
 
+  block auth
   div(id='auth-details')
-    a(href='#authentication') Authentication
+    :markdown
+      # [Authentication](#authentication)
 
     :markdown
       > Users must be authenticated in the API by using secure 
       [JSON Web Tokens (JWT)](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)
       . The following steps will show you how to gain one.
 
+    br
+
     :markdown
       ## Login Types
       There are two forms of authentication built in at the moment. 
+      
       1. One is what we call local authentication which is done by providing a phone number along with a password. This is verified 
       via a two factor authenciation methodology via a text message. 
       1. The second is authentication via Facebook. In order to be authenticated via Facebook, a user must be at least 18 years old. 
-
-  br
+    
   br
 
   form#credentials
