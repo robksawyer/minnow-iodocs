@@ -88,9 +88,11 @@
         }
       }
     },
+
     "Posts": {
       "methods": {
-        "latest": {
+
+        "getLatest": {
           "name": "Latest Posts",
           "description": "Returns the latest posts.",
           "httpMethod": "GET",
@@ -100,14 +102,14 @@
                     "title":"limit",
                     "required":false,
                     "default": 10,
-                    "type":"number",
+                    "type":"integer",
                     "description":"Return a certain number."
                 },
                 "skip": {
                     "title":"skip",
                     "required":false,
                     "default": 0,
-                    "type":"number",
+                    "type":"integer",
                     "description":"This is used for paging. Skip the number of posts you want."
                 },
                 "access_token": {
@@ -119,7 +121,176 @@
                 }
             }
         }
+      },
+      "createPost": {
+          "name": "Create a Post",
+          "description": "Create a Post.",
+          "httpMethod": "POST",
+          "path": "/post/create",
+            "parameters": {
+                "body": {
+                    "title":"body",
+                    "required":true,
+                    "default": "",
+                    "type":"textarea",
+                    "description":"The post content."
+                },
+                "secret": {
+                    "title":"secret",
+                    "required":true,
+                    "default": "",
+                    "type":"string",
+                    "description":"What folks will pay for."
+                },
+                "category": {
+                    "title":"category",
+                    "required":true,
+                    "default": "uncategorized",
+                    "type":"string",
+                    "description":"The post status.",
+                    "enum": ["uncategorized", "person", "place", "thing", "other"]
+                },
+                "img": {
+                    "title":"img",
+                    "required":false,
+                    "default": "{}",
+                    "type":"json",
+                    "description":"A JSON object that contains the Flickr img details."
+                },
+                "status": {
+                    "title":"status",
+                    "required":true,
+                    "default": "published",
+                    "type":"string",
+                    "description":"The comment status.",
+                    "enum": ["published", "draft", "banned"]
+                },
+                "likes": {
+                    "title":"likes",
+                    "required":false,
+                    "default": [],
+                    "type":"array",
+                    "description":"The LIKE ids associated with the POST."
+                },
+                "flags": {
+                    "title":"flags",
+                    "required":false,
+                    "default": [],
+                    "type":"array",
+                    "description":"The FLAG ids associated with the POST."
+                },
+                "comments": {
+                    "title":"comments",
+                    "required":false,
+                    "default": [],
+                    "type":"array",
+                    "description":"The COMMENT ids associated with the POST."
+                },
+                "owner": {
+                    "title":"owner",
+                    "required":true,
+                    "default": 0,
+                    "type":"integer",
+                    "description":"The USER id that the comment is associated with."
+                },
+                "access_token": {
+                    "title":"access_token",
+                    "required":true,
+                    "default": "",
+                    "type":"string",
+                    "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                }
+            }
+        }
+
+    },
+
+    "Comments": {
+      "methods": {
+
+        "getComments": {
+          "name": "Retrieve a Post's Comments",
+          "description": "Returns the latest comments for a post.",
+          "httpMethod": "GET",
+          "path": "/comments",
+            "parameters": {
+                "limit": {
+                    "title":"limit",
+                    "required":false,
+                    "default": 10,
+                    "type":"integer",
+                    "description":"Return a certain number."
+                },
+                "skip": {
+                    "title":"skip",
+                    "required":false,
+                    "default": 0,
+                    "type":"integer",
+                    "description":"This is used for paging. Skip the number of posts you want."
+                },
+                "access_token": {
+                    "title":"access_token",
+                    "required":true,
+                    "default": "",
+                    "type":"string",
+                    "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                }
+            }
+        },
+        "createComment": {
+          "name": "Create a Comment",
+          "description": "Create a Comment for a Post.",
+          "httpMethod": "POST",
+          "path": "/comments/create",
+            "parameters": {
+                "body": {
+                    "title":"body",
+                    "required":true,
+                    "default": "",
+                    "type":"textarea",
+                    "description":"The comment content."
+                },
+                "commentId": {
+                    "title":"commentId",
+                    "required":true,
+                    "default": 0,
+                    "type":"integer",
+                    "description":"The previous comment id."
+                },
+                "status": {
+                    "title":"status",
+                    "required":true,
+                    "default": "published",
+                    "type":"string",
+                    "description":"The comment status.",
+                    "enum": ["published", "draft", "banned"]
+                },
+                "post": {
+                    "title":"post",
+                    "required":true,
+                    "default": 0,
+                    "type":"integer",
+                    "description":"The POST id that the comment is associated with."
+                },
+                "owner": {
+                    "title":"owner",
+                    "required":true,
+                    "default": 0,
+                    "type":"integer",
+                    "description":"The USER id that the comment is associated with."
+                },
+                "access_token": {
+                    "title":"access_token",
+                    "required":true,
+                    "default": "",
+                    "type":"string",
+                    "description":"A valid user access token. See [gaining access token](#access_token) for more details."
+                }
+            }
+        }
+
       }
     }
+
   }
 }
