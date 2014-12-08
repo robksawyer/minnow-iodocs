@@ -42,6 +42,27 @@ block content
         type=local                      //STRING: The authentication type. This can be passed along via the query.
         ```
 
+      ### Facebook Authentication
+      Facebook authentication is carried out via Facebook's OAuth 2.0 methodology. In order to make a Facebook login request use the URL `http://localhost:1337/auth/login?type=facebook`.
+      After a valid login is completed, a user will be redirected to `http://localhost:1337/auth/facebook_oauth2?code=SOME-SECRET-CODE`.
+
+        #### Example Response
+        ```
+        {
+          "auth":{
+            "facebookId":"000000000000000000000",
+            "name":"John Doe",
+            "createdAt":"2014-12-08T03:00:08.208Z",
+            "updatedAt":"2014-12-08T03:00:08.239Z",
+            "id":1,
+            "user":1
+          },
+          "createdAt":"2014-12-08T03:00:08.232Z",
+          "updatedAt":"2014-12-08T03:00:08.232Z",
+          "id":1
+        }
+        ```
+
     br
     :markdown
       ## The Access Token 

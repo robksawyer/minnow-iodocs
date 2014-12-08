@@ -27,11 +27,13 @@
     "jsonminify": "^0.2.3",
     "jwt-simple": "^0.2.0",
     "markdown": "^0.5.0",
+    "markdown-js": "0.0.3",
     "newrelic": "^1.14.1",
     "node-json-minify": ">= 0.1.x",
     "oauth": "0.9.10",
     "querystring": "0.1.0",
     "redis": "0.8.3",
+    "supermarked": "^2.0.0",
     "supervisor": ">= 0.5.x",
     "yargs": ">= 1.2.1"
   },
