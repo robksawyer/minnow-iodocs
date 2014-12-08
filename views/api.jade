@@ -15,6 +15,18 @@ block content
   - else
       - var authed =''
 
+  block endpoints
+  div(id='endpoint-details')
+    :markdown
+      # [Endpoints](#endpoints)
+      The main API endpoint is located at `https://api.gominnow.com`.
+
+      ## Posts - `https://api.gominnow.com/post`
+      ## Comments - `https://api.gominnow.com/comment`
+      ## Flags - `https://api.gominnow.com/flag`
+      ## Likes - `https://api.gominnow.com/like`
+      ## Secrets - `https://api.gominnow.com/secret`
+
   block auth
   div(id='auth-details')
     :markdown
@@ -58,7 +70,7 @@ block content
 
       Example Response
       ----------------
-      
+
       ```
       {
         "auth":{
