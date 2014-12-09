@@ -3,14 +3,6 @@
   "protocol": "rest",
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
-  "auth": {
-    "key": {
-      "param": "access_token"
-    }
-  },
-  "headers": {
-      "Accept": "application/json"
-  },
   "resources" : {
     "Authentication [FOR REFERENCE ONLY]": {
       "methods": {
