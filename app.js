@@ -41,6 +41,7 @@ var express     = require('express'),
     RedisStore  = require('connect-redis')(express),
     jsonminify  = require("jsonminify"),
     newrelic    = require('newrelic'),
+    engines     = require('consolidate'),
     server;
 
 //
@@ -123,7 +124,8 @@ var app = module.exports = express();
 
 app.configure(function() {
     app.set('views', __dirname + '/views');
-    app.set('view engine', 'jade');
+    app.set('jade', engines.jade);
+    app.set('markdown', engines.markdown);
     app.use(express.logger());
     app.use(express.bodyParser());
     app.use(express.methodOverride());

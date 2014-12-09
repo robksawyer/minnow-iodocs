@@ -22,6 +22,7 @@
   "dependencies": {
     "clone": "0.1.1",
     "connect-redis": "1.0.6",
+    "consolidate": "^0.10.0",
     "express": "3.3.1",
     "express-markdown": "0.0.6",
     "github-flavored-markdown": "^1.0.1",
