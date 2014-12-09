@@ -16,7 +16,6 @@
                 "title":"type",
                 "required":true,
                 "default": "local",
-                "location": "header",
                 "type":"string",
                 "description":"Login type."
             },
@@ -46,7 +45,6 @@
                 "title":"type",
                 "required":true,
                 "default": "facebook",
-                "location": "header",
                 "type":"string",
                 "description":"Login type."
             },
@@ -55,7 +53,6 @@
                 "required": true,
                 "default": "736732276411375",
                 "type":"string",
-                "location": "header",
                 "description":"The Facebook client id."
             }
           }
