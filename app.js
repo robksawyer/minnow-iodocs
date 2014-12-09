@@ -124,6 +124,7 @@ var app = module.exports = express();
 
 app.configure(function() {
     app.set('views', __dirname + '/views');
+    app.set('view engine', engines.jade);
     app.set('jade', engines.jade);
     app.set('markdown', engines.markdown);
     app.use(express.logger());
