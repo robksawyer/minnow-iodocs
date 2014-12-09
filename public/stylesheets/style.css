@@ -110,7 +110,7 @@ samp {
   white-space: pre;
 }
 
-code{
+pre{
   background-color: rgba(0,0,0,0.04);
   padding-top: 0.2em;
   padding-bottom: 0.2em;
