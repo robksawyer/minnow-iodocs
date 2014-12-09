@@ -115,14 +115,6 @@ pre{
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
-code:before{
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-code:after{
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
 
 html {
   overflow-y: scroll;
