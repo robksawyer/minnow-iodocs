@@ -297,7 +297,7 @@ textarea {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-weight: bold;
+  font-weight: 300;
 }
 
 html {
@@ -310,26 +310,26 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 110%;
   margin: 10px 0;
-  line-height: 34px;
+  line-height: 110%;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 107%;
   margin: 10px 0;
 }
 
 h3{
-  font-size: 20px !important;
+  font-size: 100%;
   margin: 10px 0;
-  line-height: auto !important;
+  line-height: auto;
 }
 
 h4{
-  font-size: 16px !important;
+  font-size: 95%;
   margin: 10px 0;
-  line-height: auto !important;
+  line-height: auto;
 }
 
 ul {
@@ -627,4 +627,9 @@ li {
       h2, h3{ page-break-after: avoid; }
 
   }
+
+.resource {
+  border-bottom: 2px solid #777;
+  padding-top: 10px;
+}
 

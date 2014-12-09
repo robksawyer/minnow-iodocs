@@ -5,5 +5,5 @@ sass_dir = 'public/stylesheets/scss'
 images_dir = 'public/images'
 javascripts_dir = 'public/javascripts'
 relative_assets = true
-line_comments = true
-# output_style = :compressed
+line_comments = false
+output_style = :compressed
