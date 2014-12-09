@@ -42,14 +42,12 @@ block content
         - Local authentication is completed by providing a phone number along with a password. This account is verified via a two factor authenciation methodology via a text message.
         - The second is authentication via Facebook. In order to be authenticated via Facebook, a user must be at least 18 years old. 
 
-      Local Authentication
-      ====================
+      ### Local Authentication
       Local authentication is pretty basic. In order to validate a user via this method, provide the following parameters via a `POST` request.
 
       <br>
 
-      Endpoint
-      --------
+      #### Endpoint
 
       ```
       http://localhost:1337/auth/login?type=local
@@ -57,8 +55,7 @@ block content
 
       <br> 
 
-      Required Parameters
-      -------------------
+      #### Required Parameters
 
       ```
       phone='+10001112222'            //STRING: The phone number must contain a country and area code.
@@ -68,21 +65,20 @@ block content
 
       <br>
 
-      Example Response
-      ----------------
+      #### Example Response
+      
       ```
 
       ```
 
-      Facebook Authentication
-      =======================
+      ### Facebook Authentication
+
       Facebook authentication is carried out via Facebook's OAuth 2.0 methodology. In order to make a Facebook login request use the URL `http://localhost:1337/auth/login?type=facebook`.
       After a valid login is completed, a user will be redirected to `http://localhost:1337/auth/facebook_oauth2?code=SOME-SECRET-CODE`.
 
       <br>
 
-      Example Response
-      ----------------
+      #### Example Response
 
       ```
       {
