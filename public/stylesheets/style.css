@@ -108,11 +108,13 @@ kbd,
 samp {
   font-family: monospace, sans-serif;
   white-space: pre;
+}
+
+code{
   background-color: rgba(0,0,0,0.04);
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
-
 code:before{
   letter-spacing: -0.2em;
   content: "\00a0";
