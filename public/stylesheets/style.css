@@ -120,6 +120,7 @@ pre{
 code{
   background-color: rgba(0,0,0,0.04);
   padding: 0.2em;
+  min-height: 0.3em;
   border-radius: 3px;
 }
 
