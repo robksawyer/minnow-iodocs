@@ -116,6 +116,16 @@ pre{
   padding-bottom: 0.2em;
 }
 
+code{
+  background-color: rgba(0,0,0,0.04);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+pre code{
+  background-color: none !important;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -857,14 +867,15 @@ dd {
   }
 
   h3{
-    font-size: 110%;
+    font-size: 110% !important;
     font-weight: bold;
-    padding: 5px 0;
+    line-height: 110% !important;
   }
 
   h4{
-    font-size: 105%;
+    font-size: 105% !important;
     padding: 5px 0;
+    line-height: 105% !important;
   }
 }
 
