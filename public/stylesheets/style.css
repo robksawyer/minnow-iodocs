@@ -855,6 +855,14 @@ dd {
   h2, h3 {
     page-break-after: avoid;
   }
+
+  h3{
+    font-size: 15px;
+  }
+  
+  h4{
+    font-size: 14px;
+  }
 }
 
 /* Bookmark css */
