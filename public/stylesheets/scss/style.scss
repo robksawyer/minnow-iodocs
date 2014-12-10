@@ -662,10 +662,18 @@ li {
   h3{
     &.title{
       span.name{
-        color: #333;
         font-weight: 300;
         font-size: 150%;
         margin: 1.5em 0;
+      }
+      ul.actions{
+        li{
+          a:link,
+          a:visited,
+          a:active{
+            color: #333 !important;
+          }
+        }
       }
     }
   }
