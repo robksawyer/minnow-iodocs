@@ -130,6 +130,11 @@ $(document).ready(function() {
                             paramContainerRef = apiJson.resources[resource].methods[method].parameters[parameter];
                         }
 
+                        console.log(apiJson.resources[resource].methods[method].parameters[parameter].$ref);
+
+                        console.log(apiJson.resources[resource].methods[method].parameters[parameter]);
+                        console.log(apiJson.resources[resource].methods[method].parameters[parameter].items);
+
                         //Sets location 
                         if (paramContainerRef.location) {
                             paramReference.location = paramContainerRef.location;
