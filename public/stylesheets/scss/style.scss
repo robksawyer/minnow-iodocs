@@ -404,7 +404,7 @@ li {
     h3{
       border-bottom: none;
     }
-    
+
     & > .title {
         padding: 20px 0 10px;
         @include clearfix;
@@ -421,7 +421,7 @@ li {
 
         & .actions {
             float: right;
-
+            margin: 5px 0;
             li {
                 float: left;
                 padding: 0 10px;
