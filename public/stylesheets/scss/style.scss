@@ -251,9 +251,10 @@ button {
 input[type="submit"]{
   min-width: 100px;
   min-height: 33px;
-  border: 1px solid #999999;
+  border: 1px solid #f7f7f7;
   background-color: white;
   padding: 0.75em 0.5em;
+  border-radius: 3px;
 }
 
 button,
