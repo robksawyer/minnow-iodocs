@@ -248,6 +248,14 @@ button {
   cursor: pointer;
 }
 
+input[type="submit"]{
+  min-width: 100px;
+  min-height: 33px;
+  border: 1px solid #999999;
+  background-color: white;
+  padding: 0.75em 0.5em;
+}
+
 button,
 input,
 select,
