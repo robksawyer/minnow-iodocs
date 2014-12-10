@@ -135,7 +135,7 @@ $(document).ready(function() {
                             paramReference.location = paramContainerRef.location;
                         }
                         else if (paramReference && paramReference.location && !paramContainerRef.location) {
-                            paramContainerRef.location = paramReference.location;
+                            paramContainerRef.location = paramReference.location; //
                         }
                         else if (!paramReference && !paramReference.location) {
                             //Default location body for array type
