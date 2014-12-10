@@ -123,11 +123,45 @@
                 "enum": ["uncategorized", "person", "place", "thing", "other"]
             },
             "img": {
-                "title":"img",
-                "required":false,
-                "default": "{}",
-                "type":"object",
-                "description":"A JSON object that contains the Flickr img details."
+              "type":"object",
+              "description":"A JSON object that contains the Flickr img details.",
+              "properties": {
+                "id": {
+                    "title": "id",
+                    "required": true,
+                    "type":"string",
+                    "description": "Flickr image id.",
+                    "default": ""
+                },
+                "owner": {
+                    "title": "owner",
+                    "required": true,
+                    "type":"string",
+                    "description": "Flickr owner id.",
+                    "default": ""
+                },
+                "secret": {
+                    "title": "secret",
+                    "required": true,
+                    "type":"string",
+                    "description": "Flickr image secret.",
+                    "default": ""
+                },
+                "server": {
+                    "title": "server",
+                    "required": true,
+                    "type":"string",
+                    "description": "Flickr server number.",
+                    "default": ""
+                },
+                "farm": {
+                    "title": "farm",
+                    "required": true,
+                    "type":"string",
+                    "description": "Flickr farm id.",
+                    "default": ""
+                }
+              }
             },
             "status": {
                 "title":"status",
@@ -255,6 +289,47 @@
                 "default": 0,
                 "type":"integer",
                 "description":"The USER id that the comment is associated with."
+            },
+            "access_token": {
+                "title":"access_token",
+                "required":true,
+                "default": "",
+                "type":"string",
+                "description":"A valid user access token. See Authentication above for more details."
+            }
+          }
+        }
+      }
+    },
+
+    "Services": {
+      "methods": {
+        "searchFlickr": {
+          "name": "Searches flickr for an image.",
+          "description": "Returns images from flickr.",
+          "httpMethod": "GET",
+          "path": "/service/searchFlickr",
+          "parameters": {
+            "limit": {
+                "title":"limit",
+                "required":false,
+                "default": 15,
+                "type":"integer",
+                "description":"Return a certain number per page."
+            },
+            "page": {
+                "title":"page",
+                "required":false,
+                "default": 1,
+                "type":"integer",
+                "description":"The page number to return."
+            },
+            "q": {
+                "title":"query",
+                "required":true,
+                "default": "",
+                "type":"string",
+                "description":"The search query. The search is carried out like %query%."
             },
             "access_token": {
                 "title":"access_token",
