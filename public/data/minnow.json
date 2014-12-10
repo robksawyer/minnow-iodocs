@@ -127,9 +127,9 @@
                   "price": {
                     "title":"price",
                     "required": false,
-                    "default": 0.00,
-                    "type":"number",
-                    "description":"Cost of the secret."
+                    "default": "0.00",
+                    "type":"string",
+                    "description":"Cost of the secret. This should be a float value."
                   },
                   "status": {
                     "title":"status",
