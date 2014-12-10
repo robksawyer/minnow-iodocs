@@ -86,14 +86,14 @@
                 "title":"limit",
                 "required":false,
                 "default": 10,
-                "type":"integer",
+                "type":"string",
                 "description":"Return a certain number."
             },
             "skip": {
                 "title":"skip",
                 "required":false,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"This is used for paging. Skip the number of posts you want."
             },
             "access_token": {
@@ -174,7 +174,7 @@
                 "title":"owner",
                 "required":true,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"The USER id that the comment is associated with."
             },
             "access_token": {
@@ -201,14 +201,14 @@
                 "title":"limit",
                 "required":false,
                 "default": 10,
-                "type":"integer",
+                "type":"string",
                 "description":"Return a certain number."
             },
             "skip": {
                 "title":"skip",
                 "required":false,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"This is used for paging. Skip the number of posts you want."
             },
             "access_token": {
@@ -237,7 +237,7 @@
                 "title":"commentId",
                 "required":true,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"The previous comment id."
             },
             "status": {
@@ -252,14 +252,14 @@
                 "title":"post",
                 "required":true,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"The POST id that the comment is associated with."
             },
             "owner": {
                 "title":"owner",
                 "required":true,
                 "default": 0,
-                "type":"integer",
+                "type":"string",
                 "description":"The USER id that the comment is associated with."
             },
             "access_token": {
