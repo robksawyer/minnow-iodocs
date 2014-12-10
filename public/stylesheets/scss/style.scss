@@ -413,6 +413,7 @@ li {
         & .name {
             font-size: 18px;
             float: left;
+            margin: 3px 0;
 
             &:hover {
                 cursor: pointer;
@@ -446,10 +447,11 @@ li {
     border: 1px solid #eee;
     @include border-radius(5px);
     margin: 10px 0;
-
+    
     .title {
         overflow: hidden;
         @include border-radius(5px);
+        border-bottom: none;
 
         &:hover {
             background-color: rgba(255,255,255, 0.5);
@@ -473,6 +475,7 @@ li {
 
         .name {
             font-size: 16px;
+            margin: 3px 0;
         }
 
         .description {
