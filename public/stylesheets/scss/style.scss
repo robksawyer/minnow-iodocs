@@ -401,6 +401,10 @@ li {
     border-bottom: 1px solid #eee;
     @include clearfix;
 
+    h3{
+      border-bottom: none;
+    }
+    
     & > .title {
         padding: 20px 0 10px;
         @include clearfix;
