@@ -105,7 +105,7 @@
             }
           }
         },
-        
+
         "createPost": {
           "name": "Create a Post",
           "description": "Create a Post.",
@@ -138,7 +138,7 @@
                 "title":"img",
                 "required":false,
                 "default": "{}",
-                "type":"json",
+                "type":"object",
                 "description":"A JSON object that contains the Flickr img details."
             },
             "status": {
