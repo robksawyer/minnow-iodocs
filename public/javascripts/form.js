@@ -121,10 +121,6 @@ $(document).ready(function() {
                     var paramReference;
                     //Sets appropriate parameters of type == "array"
                     if (apiJson.resources[resource].methods[method].parameters[parameter].type == "array" || (apiJson.resources[resource].methods[method].parameters[parameter].$ref && apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]].type == "array")) {
-
-                        console.log(apiJson.resources[resource].methods[method]);
-                        console.log(apiJson.resources[resource].methods[method].parameters);
-
                         if (apiJson.resources[resource].methods[method].parameters[parameter].$ref) {
                             paramReference = apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]].items;
                             paramContainerRef = apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]];
@@ -141,7 +137,7 @@ $(document).ready(function() {
                         else if (paramReference && paramReference.location && !paramContainerRef.location) {
                             paramContainerRef.location = paramReference.location;
                         }
-                        else if (!paramReference.location) {
+                        else if (!paramReference && !paramReference.location) {
                             //Default location body for array type
                             paramContainerRef.location = "body";
                             paramReference.location = "body";
