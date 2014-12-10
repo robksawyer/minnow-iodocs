@@ -150,6 +150,7 @@ html {
 
 a:link {
   -webkit-tap-highlight-color: #ff5e99;
+  text-decoration: none;
 }
 
 a:hover,
@@ -328,10 +329,9 @@ h2 {
 
 h3{
   font-size: 125%;
-  line-height: 103%;
   color: #325d72;
   font-weight: bold;
-  margin: 1.5em 0 1em;
+  margin: 2em 0 2em;
   border-bottom: 1px solid #ddd;
 }
 
@@ -403,7 +403,7 @@ li {
     @include clearfix;
 
     h3{
-      border-bottom: none;
+      border: none;
     }
 
     & > .title {
@@ -447,7 +447,7 @@ li {
     border: 1px solid #eee;
     @include border-radius(5px);
     margin: 10px 0;
-    
+
     .title {
         overflow: hidden;
         @include border-radius(5px);
