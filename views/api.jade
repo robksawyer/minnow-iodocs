@@ -44,14 +44,20 @@ block content
       <br>
       
       ### Local Authentication
-      Local authentication is pretty basic. In order to validate a user via this method, provide the following parameters via a `POST` request.
+      Local authentication is very similar to your basic username/password sign up and log in, but there are some caveats. At Minnow, we like to do things a bit differently. One of those things
+      involves enforcing that a user have a valid telephone number before they're able to sign up. We think that this validates the user's existance better than email address. If the user 
+      does not have a phone number, they can use the Facebook sign up and log in method below. In order to validate the user via the local method, provide the following parameters via a `POST` request.
+
+      <br>
+      If the user does not exist in the system, he/she will be created automatically.
 
       <br>
 
-      #### Endpoint
+      #### Log In Endpoint
 
       ```
       https://api.gominnow.com/auth/login?type=local
+
       ```
 
       <br> 
@@ -66,13 +72,53 @@ block content
 
       <br>
 
-      #### Example Response
+      #### Example Response (User Created & Logged In)
       
       ```
+      {
+          "message": {
+              "auth": {
+                  "password": "$2a$10$AOYGeFfjiIGiy4/XelWHcOnlvRUHC1IRqaz9i1o5yQWlK2YnWPW5q",
+                  "phone": "+10001112222",
+                  "createdAt": "2014-12-10T05:37:53.094Z",
+                  "updatedAt": "2014-12-10T05:37:53.120Z",
+                  "id": 4,
+                  "user": 4
+              },
+              "createdAt": "2014-12-10T05:37:53.113Z",
+              "updatedAt": "2014-12-10T05:37:53.113Z",
+              "id": 4
+          },
+          "status": 200
+      }
+      ```
 
+      #### Errors
+
+      ```
+      {
+          "message": {
+              "error": "Invalid phone or password"
+          },
+          "status": 403
+      }
       ```
       
       <br>
+
+      #### Log Out Endpoint
+      ```
+      https://api.gominnow.com/auth/logout
+      ```
+
+
+      #### Log Out Response
+      ```
+      {
+          "message": "You have successfully logged out.",
+          "status": 200
+      }
+      ```
 
       ### Facebook Authentication
 
