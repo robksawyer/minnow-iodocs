@@ -114,7 +114,7 @@
                 "description":"The post content."
             },
             "secret": {
-                "title":"object",
+                "type":"object",
                 "description":"A JSON object that contains the secret details.",
                 "properties": {
                   "body":{
