@@ -9,7 +9,7 @@
       "methods": {
         "login": {
           "name": "User Login",
-          "description": "Logs a user in.",
+          "description": "Logs a user into the app.",
           "httpMethod": "POST",
           "path": "/auth/login?type=local",
           "parameters": {
@@ -28,6 +28,12 @@
                 "description":"Password for your account."
             }
           }
+        },
+        "logout": {
+          "name": "User Logout",
+          "description": "Logs a user out of the app.",
+          "httpMethod": "GET",
+          "path": "/auth/logout"
         },
         "facebook-login": {
           "name": "Facebook User Login",
