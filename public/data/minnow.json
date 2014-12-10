@@ -115,6 +115,7 @@
             },
             "secret": {
                 "type":"object",
+                "description":"A JSON object that contains the secret details.",
                 "properties": {
                   "body":{
                     "title":"body",
@@ -135,8 +136,7 @@
                     "required":false,
                     "default":"hidden",
                     "type":"string",
-                    "description":"If a secret is free, the status should be public.",
-                    "enum": ["hidden", "public", "private", "banned"]
+                    "description":"If a secret is free, the status should be public."
                   }
                 }
             },
@@ -150,6 +150,7 @@
             },
             "img": {
               "type":"object",
+              "description":"A JSON object that contains the Flickr img details.",
               "properties": {
                 "id": {
                     "title": "id",
