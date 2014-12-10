@@ -137,7 +137,7 @@ $(document).ready(function() {
                         else if (paramReference && paramReference.location && !paramContainerRef.location) {
                             paramContainerRef.location = paramReference.location; //
                         }
-                        else if (!paramReference && !paramReference.location) {
+                        else if (!paramReference || !paramReference.location) {
                             //Default location body for array type
                             paramContainerRef.location = "body";
                             paramReference.location = "body";
