@@ -115,7 +115,6 @@
             },
             "secret": {
                 "type":"object",
-                "description":"A JSON object that contains the secret details.",
                 "properties": {
                   "body":{
                     "title":"body",
@@ -151,7 +150,6 @@
             },
             "img": {
               "type":"object",
-              "description":"A JSON object that contains the Flickr img details.",
               "properties": {
                 "id": {
                     "title": "id",
