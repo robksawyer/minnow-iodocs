@@ -134,17 +134,11 @@ $(document).ready(function() {
                             paramContainerRef = apiJson.resources[resource].methods[method].parameters[parameter];
                         }
 
-                        console.log(paramReference);
-                        console.log(paramContainerRef);
-
                         //Sets location 
                         if (paramContainerRef.location) {
-                            if(!paramContainerRef.location){
-                                paramContainerRef.location = "body";
-                            }
                             paramReference.location = paramContainerRef.location;
                         }
-                        else if (paramReference.location && !paramContainerRef.location) {
+                        else if (paramReference && paramReference.location && !paramContainerRef.location) {
                             paramContainerRef.location = paramReference.location;
                         }
                         else if (!paramReference.location) {
