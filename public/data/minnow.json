@@ -11,15 +11,8 @@
           "name": "User Login",
           "description": "Logs a user in.",
           "httpMethod": "POST",
-          "path": "/auth/login",
+          "path": "/auth/login?type=local",
           "parameters": {
-            "type": {
-                "title":"type",
-                "required":true,
-                "default": "local",
-                "type":"string",
-                "description":"Login type."
-            },
             "phone": {
                 "title":"phone number",
                 "required":false,
@@ -40,15 +33,8 @@
           "name": "Facebook User Login",
           "description": "Logs a user in via Facebook.",
           "httpMethod": "GET",
-          "path": "/auth/login",
+          "path": "/auth/login?type=facebook",
           "parameters": {
-            "type": {
-                "title":"type",
-                "required":true,
-                "default": "facebook",
-                "type":"string",
-                "description":"Login type."
-            },
             "client_id": {
                 "title":"client_id",
                 "required": true,
@@ -86,14 +72,14 @@
                 "title":"limit",
                 "required":false,
                 "default": 10,
-                "type":"string",
+                "type":"integer",
                 "description":"Return a certain number."
             },
             "skip": {
                 "title":"skip",
                 "required":false,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"This is used for paging. Skip the number of posts you want."
             },
             "access_token": {
@@ -174,7 +160,7 @@
                 "title":"owner",
                 "required":true,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"The USER id that the comment is associated with."
             },
             "access_token": {
@@ -201,14 +187,14 @@
                 "title":"limit",
                 "required":false,
                 "default": 10,
-                "type":"string",
+                "type":"integer",
                 "description":"Return a certain number."
             },
             "skip": {
                 "title":"skip",
                 "required":false,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"This is used for paging. Skip the number of posts you want."
             },
             "access_token": {
@@ -237,7 +223,7 @@
                 "title":"commentId",
                 "required":true,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"The previous comment id."
             },
             "status": {
@@ -252,14 +238,14 @@
                 "title":"post",
                 "required":true,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"The POST id that the comment is associated with."
             },
             "owner": {
                 "title":"owner",
                 "required":true,
                 "default": 0,
-                "type":"string",
+                "type":"integer",
                 "description":"The USER id that the comment is associated with."
             },
             "access_token": {
