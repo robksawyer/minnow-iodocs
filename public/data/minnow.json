@@ -138,25 +138,31 @@
                 "enum": ["published", "draft", "banned"]
             },
             "likes": {
+              "type":"array",
+              "items":{
                 "title":"likes",
                 "required":false,
-                "default": "[]",
-                "type":"array",
+                "default": "",
                 "description":"The LIKE ids associated with the POST."
+              }
             },
             "flags": {
+              "type":"array",
+              "items":{
                 "title":"flags",
                 "required":false,
-                "default": "[]",
-                "type":"array",
+                "default": "",
                 "description":"The FLAG ids associated with the POST."
+              }
             },
             "comments": {
-                "title":"comments",
-                "required":false,
-                "default": "[]",
                 "type":"array",
-                "description":"The COMMENT ids associated with the POST."
+                "items":{
+                  "title":"comments",
+                  "required":false,
+                  "default": "",
+                  "description":"The COMMENT ids associated with the POST."
+                }
             },
             "owner": {
                 "title":"owner",

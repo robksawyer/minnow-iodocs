@@ -118,7 +118,7 @@ $(document).ready(function() {
                         }
                     };
 
-                    var paramReference = {};
+                    var paramReference;
                     //Sets appropriate parameters of type == "array"
                     if (apiJson.resources[resource].methods[method].parameters[parameter].type == "array" || (apiJson.resources[resource].methods[method].parameters[parameter].$ref && apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]].type == "array")) {
                         if (apiJson.resources[resource].methods[method].parameters[parameter].$ref) {
@@ -130,19 +130,14 @@ $(document).ready(function() {
                             paramContainerRef = apiJson.resources[resource].methods[method].parameters[parameter];
                         }
 
-                        console.log(apiJson.resources[resource].methods[method].parameters[parameter].$ref);
-
-                        console.log(apiJson.resources[resource].methods[method].parameters[parameter]);
-                        console.log(apiJson.resources[resource].methods[method].parameters[parameter].items);
-
                         //Sets location 
                         if (paramContainerRef.location) {
                             paramReference.location = paramContainerRef.location;
                         }
-                        else if (paramReference && paramReference.location && !paramContainerRef.location) {
-                            paramContainerRef.location = paramReference.location; //
+                        else if (paramReference.location && !paramContainerRef.location) {
+                            paramContainerRef.location = paramReference.location;
                         }
-                        else if (!paramReference || !paramReference.location) {
+                        else if (!paramReference.location) {
                             //Default location body for array type
                             paramContainerRef.location = "body";
                             paramReference.location = "body";
