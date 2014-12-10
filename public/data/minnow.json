@@ -4,6 +4,7 @@
   "basePath": "http://api.gominnow.com",
   "publicPath": "",
   "resources" : {
+    
     "Authentication [FOR REFERENCE ONLY]": {
       "methods": {
         "login": {
@@ -104,6 +105,7 @@
             }
           }
         },
+        
         "createPost": {
           "name": "Create a Post",
           "description": "Create a Post.",
@@ -112,14 +114,14 @@
           "parameters": {
             "body": {
                 "title":"body",
-                "required":true,
+                "required":false,
                 "default": "",
                 "type":"textarea",
                 "description":"The post content."
             },
             "secret": {
                 "title":"secret",
-                "required":true,
+                "required":false,
                 "default": "",
                 "type":"string",
                 "description":"What folks will pay for."
@@ -186,6 +188,7 @@
         }
       }
     },
+    
     "Comments": {
       "methods": {
         "getComments": {
@@ -270,5 +273,6 @@
         }
       }
     }
+
   }
 }
