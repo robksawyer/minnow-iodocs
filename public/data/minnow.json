@@ -114,11 +114,32 @@
                 "description":"The post content."
             },
             "secret": {
-                "title":"secret",
-                "required":false,
-                "default": "",
-                "type":"string",
-                "description":"What folks will pay for."
+                "title":"object",
+                "description":"A JSON object that contains the secret details.",
+                "properties": {
+                  "body":{
+                    "title":"body",
+                    "required":true,
+                    "default": "",
+                    "type":"textarea",
+                    "description":"The content that people will pay for."
+                  },
+                  "price": {
+                    "title":"price",
+                    "required": false,
+                    "default": 0.00,
+                    "type":"float",
+                    "description":"Cost of the secret."
+                  },
+                  "status": {
+                    "title":"status",
+                    "required":false,
+                    "default":"hidden",
+                    "type":"string",
+                    "description":"If a secret is free, the status should be public.",
+                    "enum": ["hidden", "public", "private", "banned"]
+                  }
+                }
             },
             "category": {
                 "title":"category",
@@ -256,7 +277,7 @@
         },
         "createComment": {
           "name": "Create a Comment",
-          "description": "Create a Comment for a Post.",
+          "description": "Create a Comment for a Post. This is only allowed when a user has paid to reveal the secret.",
           "httpMethod": "POST",
           "path": "/comments/create",
           "parameters": {
