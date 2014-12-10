@@ -128,7 +128,7 @@
                     "title":"price",
                     "required": false,
                     "default": 0.00,
-                    "type":"float",
+                    "type":"number",
                     "description":"Cost of the secret."
                   },
                   "status": {
