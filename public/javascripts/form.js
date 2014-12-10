@@ -124,7 +124,7 @@ $(document).ready(function() {
 
                         console.log(apiJson.resources[resource].methods[method]);
                         console.log(apiJson.resources[resource].methods[method].parameters);
-                        
+
                         if (apiJson.resources[resource].methods[method].parameters[parameter].$ref) {
                             paramReference = apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]].items;
                             paramContainerRef = apiJson.schemas[apiJson.resources[resource].methods[method].parameters[parameter].$ref.split("/")[2]];
@@ -133,6 +133,9 @@ $(document).ready(function() {
                             paramReference = apiJson.resources[resource].methods[method].parameters[parameter].items;
                             paramContainerRef = apiJson.resources[resource].methods[method].parameters[parameter];
                         }
+
+                        console.log(paramReference);
+                        console.log(paramContainerRef);
 
                         //Sets location 
                         if (paramContainerRef.location) {
