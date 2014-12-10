@@ -139,6 +139,9 @@ $(document).ready(function() {
 
                         //Sets location 
                         if (paramContainerRef.location) {
+                            if(!paramContainerRef.location){
+                                paramContainerRef.location = "body";
+                            }
                             paramReference.location = paramContainerRef.location;
                         }
                         else if (paramReference.location && !paramContainerRef.location) {
