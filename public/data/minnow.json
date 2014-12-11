@@ -132,7 +132,7 @@
                 },
                 "status": {
                   "title":"status",
-                  "required":false,
+                  "required":true,
                   "default":"hidden",
                   "type":"string",
                   "description":"If a secret is free, the status should be public.",
