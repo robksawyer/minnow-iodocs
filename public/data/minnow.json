@@ -120,7 +120,7 @@
                 "body":{
                   "title":"body",
                   "required":true,
-                  "type":"textarea",
+                  "type":"string",
                   "description":"The content that people will pay for."
                 },
                 "price": {
